@@ -113,6 +113,12 @@ type
     EditTelefonoMovilAlternativo2: TEdit;
     EditObservaciones: TEdit;
     Label33: TLabel;
+    SG_ComboBoxCompaniaTelPart: TSG_ComboBox;
+    SG_ComboBoxCompaniaTelPartAlt1: TSG_ComboBox;
+    SG_ComboBoxCompaniaTelPartAlt2: TSG_ComboBox;
+    SG_ComboBoxCompaniaTelMovil: TSG_ComboBox;
+    SG_ComboBoxCompaniaTelMovilAlt1: TSG_ComboBox;
+    SG_ComboBoxCompaniaTelMovilAlt2: TSG_ComboBox;
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure BitBtnAceptarClick(Sender: TObject);
@@ -272,6 +278,13 @@ begin
   Self.SG_ComboBoxPelo.cargarValores;
   Self.SG_comboBoxPiel.cargarValores;
   Self.SG_ComboBoxTalle.cargarValores;
+  Self.SG_ComboBoxTalle.cargarValores;
+  Self.SG_ComboBoxCompaniaTelPart.cargarValores;
+  Self.SG_ComboBoxCompaniaTelPartAlt1.cargarValores;
+  Self.SG_ComboBoxCompaniaTelPartAlt2.cargarValores;
+  Self.SG_ComboBoxCompaniaTelMovil.cargarValores;
+  Self.SG_ComboBoxCompaniaTelMovilAlt1.cargarValores;
+  Self.SG_ComboBoxCompaniaTelMovilAlt2.cargarValores;
 end;
 
 procedure TFormRecurso.FormCreate(Sender: TObject);
@@ -317,11 +330,17 @@ begin
       'ciudad_id, '+
       'estado_id, '+
       'telefono_particular, '+
+      'comp_telefono_particular, '+
       'tel_particular_alt_1, '+
+      'comp_tel_particular_alt_1, '+
       'tel_particular_alt_2, '+
+      'comp_tel_particular_alt_2, '+
       'telefono_movil, '+
+      'comp_telefono_movil, '+
       'telefono_movil_alternativo_1, '+
+      'comp_telefono_movil_alt_1, '+
       'telefono_movil_alternativo_2, '+
+      'comp_telefono_movil_alt_2, '+
       'nextel, '+
       'responsable, '+
       'documento_RG, '+
@@ -355,11 +374,17 @@ begin
       Self.SG_ComboBoxCiudad.getCodigo+', '+
       Self.SG_ComboBoxEstado.getCodigo+', '+
       QuotedStr(Self.EditTelefonoParticular.Text)+', '+
+      Self.SG_ComboBoxCompaniaTelPart.getCodigo+', '+
       QuotedStr(Self.EditTelefonoParticularAlternativo1.Text)+', '+
+      Self.SG_ComboBoxCompaniaTelPartAlt1.getCodigo+', '+
       QuotedStr(Self.EditTelefonoParticularAlternativo2.Text)+', '+
+      Self.SG_ComboBoxCompaniaTelPartAlt2.getCodigo+', '+
       QuotedStr(Self.EditTelefonoMovil.Text)+', '+
+      Self.SG_ComboBoxCompaniaTelMovil.getCodigo+', '+
       QuotedStr(Self.EditTelefonoMovilAlternativo1.Text)+', '+
+      Self.SG_ComboBoxCompaniaTelMovilAlt1.getCodigo+', '+
       QuotedStr(Self.EditTelefonoMovilAlternativo2.Text)+', '+
+      Self.SG_ComboBoxCompaniaTelMovilAlt2.getCodigo+', '+
       QuotedStr(Self.EditNextel.Text)+', '+
       QuotedStr(Self.EditResponsable.Text)+', '+
       QuotedStr(Self.EditDocumentoRG.Text)+', '+
@@ -428,6 +453,18 @@ begin
         QuotedStr(Self.EditTelefonoMovilAlternativo1.Text)+', '+
       'telefono_movil_alternativo_2 = '+
         QuotedStr(Self.EditTelefonoMovilAlternativo2.Text)+', '+
+      'comp_telefono_particular = '+
+        Self.SG_ComboBoxCompaniaTelPart.getCodigo+', '+
+      'comp_tel_particular_alt_1 = '+
+        Self.SG_ComboBoxCompaniaTelPartAlt1.getCodigo+', '+
+      'comp_tel_particular_alt_2 = '+
+        Self.SG_ComboBoxCompaniaTelPartAlt2.getCodigo+', '+
+      'comp_telefono_movil = '+
+        Self.SG_ComboBoxCompaniaTelMovil.getCodigo+', '+
+      'comp_telefono_movil_alt_1 = '+
+        Self.SG_ComboBoxCompaniaTelMovilAlt1.getCodigo+', '+
+      'comp_telefono_movil_alt_2 = '+
+        Self.SG_ComboBoxCompaniaTelMovilAlt2.getCodigo+', '+
       'nextel = '+QuotedStr(Self.EditNextel.Text)+', '+
       'responsable = '+QuotedStr(Self.EditResponsable.Text)+', '+
       'documento_RG = '+QuotedStr(Self.EditDocumentoRG.Text)+', '+

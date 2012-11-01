@@ -1,6 +1,6 @@
 object FormRecurso: TFormRecurso
-  Left = 235
-  Top = 130
+  Left = 122
+  Top = 23
   Width = 919
   Height = 713
   Caption = 'Recurso'
@@ -407,14 +407,14 @@ object FormRecurso: TFormRecurso
     object EditTelefonoParticular: TEdit
       Left = 120
       Top = 280
-      Width = 137
+      Width = 97
       Height = 21
       TabOrder = 11
     end
     object EditTelefonoMovil: TEdit
       Left = 120
       Top = 352
-      Width = 137
+      Width = 97
       Height = 21
       TabOrder = 14
     end
@@ -654,28 +654,28 @@ object FormRecurso: TFormRecurso
     object EditTelefonoParticularAlternativo1: TEdit
       Left = 120
       Top = 304
-      Width = 137
+      Width = 97
       Height = 21
       TabOrder = 12
     end
     object EditTelefonoParticularAlternativo2: TEdit
       Left = 120
       Top = 328
-      Width = 137
+      Width = 97
       Height = 21
       TabOrder = 13
     end
     object EditTelefonoMovilAlternativo1: TEdit
       Left = 120
       Top = 376
-      Width = 137
+      Width = 97
       Height = 21
       TabOrder = 15
     end
     object EditTelefonoMovilAlternativo2: TEdit
       Left = 120
       Top = 400
-      Width = 137
+      Width = 97
       Height = 21
       TabOrder = 16
     end
@@ -685,6 +685,90 @@ object FormRecurso: TFormRecurso
       Width = 137
       Height = 21
       TabOrder = 37
+    end
+    object SG_ComboBoxCompaniaTelPart: TSG_ComboBox
+      Left = 216
+      Top = 280
+      Width = 73
+      Height = 21
+      Hint = 'Compañia de telefono'
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 42
+      esPosibleActualizarValores = True
+      nombreTabla = 'companiaTelefono'
+      nombreCampoClave = 'id'
+      nombreCampoDescripcion = 'descripcion'
+    end
+    object SG_ComboBoxCompaniaTelPartAlt1: TSG_ComboBox
+      Left = 216
+      Top = 304
+      Width = 73
+      Height = 21
+      Hint = 'Compañia de telefono'
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 43
+      esPosibleActualizarValores = True
+      nombreTabla = 'companiaTelefono'
+      nombreCampoClave = 'id'
+      nombreCampoDescripcion = 'descripcion'
+    end
+    object SG_ComboBoxCompaniaTelPartAlt2: TSG_ComboBox
+      Left = 216
+      Top = 328
+      Width = 73
+      Height = 21
+      Hint = 'Compañia de telefono'
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 44
+      esPosibleActualizarValores = True
+      nombreTabla = 'companiaTelefono'
+      nombreCampoClave = 'id'
+      nombreCampoDescripcion = 'descripcion'
+    end
+    object SG_ComboBoxCompaniaTelMovil: TSG_ComboBox
+      Left = 216
+      Top = 352
+      Width = 73
+      Height = 21
+      Hint = 'Compañia de telefono'
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 45
+      esPosibleActualizarValores = True
+      nombreTabla = 'companiaTelefono'
+      nombreCampoClave = 'id'
+      nombreCampoDescripcion = 'descripcion'
+    end
+    object SG_ComboBoxCompaniaTelMovilAlt1: TSG_ComboBox
+      Left = 216
+      Top = 376
+      Width = 73
+      Height = 21
+      Hint = 'Compañia de telefono'
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 46
+      esPosibleActualizarValores = True
+      nombreTabla = 'companiaTelefono'
+      nombreCampoClave = 'id'
+      nombreCampoDescripcion = 'descripcion'
+    end
+    object SG_ComboBoxCompaniaTelMovilAlt2: TSG_ComboBox
+      Left = 216
+      Top = 400
+      Width = 73
+      Height = 21
+      Hint = 'Compañia de telefono'
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 47
+      esPosibleActualizarValores = True
+      nombreTabla = 'companiaTelefono'
+      nombreCampoClave = 'id'
+      nombreCampoDescripcion = 'descripcion'
     end
   end
   object GroupBox2: TGroupBox
