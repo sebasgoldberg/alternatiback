@@ -1,0 +1,5 @@
+-agregar sistema de traduccion
+
+-agregar iconos a bitbtns
+-agregar icono a la aplicacion
+

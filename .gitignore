@@ -1,0 +1,17 @@
+delivery/*
+otros/*
+install/ALTERN~1/*
+*.png
+*.exe
+*.dll
+*.xlsx
+*.doc
+*.docx
+*.dcu
+*.drc
+*.~dfm
+*.~dpr
+*.~pas
+*.csv
+*.ico
+*.pdf
