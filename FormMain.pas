@@ -93,6 +93,7 @@ type
     SG_ComboBoxSexo: TSG_ComboBoxSexo;
     BitBtnEnviarFotosMail: TBitBtn;
     ButtonExcel: TButton;
+    ButtonDescargarImagenes: TButton;
     procedure FormActivate(Sender: TObject);
     procedure BitBtnCrearClick(Sender: TObject);
     procedure BitBtnBuscarClick(Sender: TObject);
@@ -104,6 +105,7 @@ type
     procedure QueryRecursosAfterClose(DataSet: TDataSet);
     procedure BitBtnEnviarFotosMailClick(Sender: TObject);
     procedure ButtonExcelClick(Sender: TObject);
+    procedure ButtonDescargarImagenesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -482,6 +484,46 @@ end;
 procedure TFormAlternativa.ButtonExcelClick(Sender: TObject);
 begin
   Excel2007(Self.DBGridRecursos.DataSource.DataSet,'Alternativa');
+end;
+
+procedure TFormAlternativa.ButtonDescargarImagenesClick(Sender: TObject);
+var
+  blob:TBlobField;
+  fileName:string;
+  consulta:string;
+  query:TQuery;
+  path:string;
+begin
+
+  path:='Z:\vm-compartido\fotos-recursos';
+
+  consulta:=
+    'select '+
+      'id, '+
+      'imagen '+
+    'from imagen_recurso '+
+    'where '+
+    // @todo Quitar filtro
+      'recurso_id = 17 or '+
+      'recurso_id = 18';
+
+  query:=TSG_DataBase.getInstance.openQuery(consulta);
+
+  query.First;
+
+  while not query.Eof do
+  begin
+
+    fileName:=path+'\'+IntToStr(query['id'])+'.jpg';
+
+    blob:=TBlobField(query.FieldByName('imagen'));
+
+    blob.SaveToFile(fileName);
+
+    query.Next;
+
+  end;
+
 end;
 
 end.

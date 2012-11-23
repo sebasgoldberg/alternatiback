@@ -1,6 +1,6 @@
 object FormRecurso: TFormRecurso
-  Left = 122
-  Top = 23
+  Left = 214
+  Top = 31
   Width = 919
   Height = 713
   Caption = 'Recurso'

@@ -1,7 +1,7 @@
 object FormAlternativa: TFormAlternativa
-  Left = 376
-  Top = 111
-  Width = 704
+  Left = 654
+  Top = 131
+  Width = 750
   Height = 621
   Caption = 'Alternativa'
   Color = clBtnFace
@@ -19,7 +19,7 @@ object FormAlternativa: TFormAlternativa
   object GroupBox1: TGroupBox
     Left = 8
     Top = 8
-    Width = 577
+    Width = 623
     Height = 385
     Anchors = [akLeft, akTop, akRight]
     Caption = 'Seleccion de recursos'
@@ -588,7 +588,7 @@ object FormAlternativa: TFormAlternativa
   object GroupBox2: TGroupBox
     Left = 8
     Top = 400
-    Width = 673
+    Width = 719
     Height = 177
     Anchors = [akLeft, akTop, akRight, akBottom]
     Caption = 'Recursos seleccionados'
@@ -596,7 +596,7 @@ object FormAlternativa: TFormAlternativa
     object DBGridRecursos: TDBGrid
       Left = 8
       Top = 48
-      Width = 657
+      Width = 703
       Height = 121
       Anchors = [akLeft, akTop, akRight, akBottom]
       DataSource = DataSourceRecursos
@@ -896,7 +896,7 @@ object FormAlternativa: TFormAlternativa
     end
   end
   object BitBtnBuscar: TBitBtn
-    Left = 592
+    Left = 638
     Top = 16
     Width = 89
     Height = 25
@@ -906,7 +906,7 @@ object FormAlternativa: TFormAlternativa
     OnClick = BitBtnBuscarClick
   end
   object BitBtnLimpiar: TBitBtn
-    Left = 591
+    Left = 637
     Top = 48
     Width = 89
     Height = 25
@@ -914,6 +914,16 @@ object FormAlternativa: TFormAlternativa
     Caption = 'Limpiar'
     TabOrder = 2
     OnClick = BitBtnLimpiarClick
+  end
+  object ButtonDescargarImagenes: TButton
+    Left = 632
+    Top = 80
+    Width = 105
+    Height = 25
+    Anchors = [akTop, akRight]
+    Caption = 'Descargar Imagenes'
+    TabOrder = 4
+    OnClick = ButtonDescargarImagenesClick
   end
   object Database: TDatabase
     SessionName = 'Default'
